@@ -1,5 +1,4 @@
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import {
   Alert,
   Image,
@@ -8,12 +7,13 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-import { login } from "@/lib/appwrite";
-import { Redirect } from "expo-router";
-import { useGlobalContext } from "@/lib/global-provider";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
+import { login } from "@/lib/appwrite";
+import { useGlobalContext } from "@/lib/global-provider";
+import { Redirect } from "expo-router";
 
 const Auth = () => {
   const { refetch, loading, isLogged } = useGlobalContext();
